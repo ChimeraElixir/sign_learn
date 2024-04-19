@@ -21,3 +21,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+  - assets/bye.png
+  - assets/chocolate.png
+  - assets/excuse_me.png
+  - assets/good_morning.png
+  - assets/good.png
+  - assets/happy.png
+  - assets/hello.png
+  - assets/i_love_you.png
+  - assets/please.png
+  - assets/sad.png
+  - assets/thank_you.png
+  - assets/when.png

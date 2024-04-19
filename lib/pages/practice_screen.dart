@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sign_learn/widgets/level_widget.dart';
 
 class PracticeScreen extends StatefulWidget {
   static String id = "PracticeScreen";
@@ -31,7 +32,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
           style: GoogleFonts.poppins(color: Colors.white),
         ),
       ),
-      body: _body(args),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          _body(args),
+          const SizedBox(height: 15),
+          const LevelWidget(level: "Practice", fontSize: 16.5, height: 60),
+        ],
+      ),
     );
   }
 
@@ -80,79 +88,79 @@ class _PracticeScreenState extends State<PracticeScreen> {
 
   _buildLevelOne() {
     return const Center(
-      child: Text("Exercise 1"),
+      child: Image(image: AssetImage("assets/bye.png")),
     );
   }
 
   _buildLevelTwo() {
     return const Center(
-      child: Text("Exercise 2"),
+      child: Image(image: AssetImage("assets/chocolate.png")),
     );
   }
 
   _buildLevelDefault() {
     return const Center(
-      child: Text("No Exercise detected"),
+      child: Image(image: AssetImage("assets/excuse_me.png")),
     );
   }
 
   _buildLevelTwelve() {
     return const Center(
-      child: Text("Exercise 12"),
+      child: Image(image: AssetImage("assets/good_morning.png")),
     );
   }
 
   _buildLevelELeven() {
     return const Center(
-      child: Text("Exercise 11"),
+      child: Image(image: AssetImage("assets/good.png")),
     );
   }
 
   _buildLevelTen() {
     return const Center(
-      child: Text("Exercise 10"),
+      child: Image(image: AssetImage("assets/happy.png")),
     );
   }
 
   _buildLevelNine() {
     return const Center(
-      child: Text("Exercise 9"),
+      child: Image(image: AssetImage("assets/hello.png")),
     );
   }
 
   _buildLevelEight() {
     return const Center(
-      child: Text("Exercise 8"),
+      child: Image(image: AssetImage("assets/i_love_you.png")),
     );
   }
 
   _buildLevelThree() {
     return const Center(
-      child: Text("Exercise 3"),
+      child: Image(image: AssetImage("assets/please.png")),
     );
   }
 
   _buildLevelFour() {
     return const Center(
-      child: Text("Exercise 4"),
+      child: Image(image: AssetImage("assets/sad.png")),
     );
   }
 
   _buildLevelSix() {
     return const Center(
-      child: Text("Exercise 6"),
+      child: Image(image: AssetImage("assets/thank_you.png")),
     );
   }
 
   _buildLevelSeven() {
     return const Center(
-      child: Text("Exercise 7"),
+      child: Image(image: AssetImage("assets/when.png")),
     );
   }
 
   _buildLevelFive() {
     return const Center(
-      child: Text("Exercise 1"),
+      child: Image(image: AssetImage("assets/excuse_me.png")),
     );
   }
 }

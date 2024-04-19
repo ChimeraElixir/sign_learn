@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sign_learn/pages/practice_screen.dart';
+import 'package:sign_learn/widgets/level_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   static String id = "HomeScreen";
@@ -40,84 +40,36 @@ class HomeScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              LevelWidget(level: "1"),
-              LevelWidget(level: "2"),
-              LevelWidget(level: "3"),
+              LevelWidget(level: "1", fontSize: 24, height: 100),
+              LevelWidget(level: "2", fontSize: 24, height: 100),
+              LevelWidget(level: "3", fontSize: 24, height: 100),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              LevelWidget(level: "4"),
-              LevelWidget(level: "5"),
-              LevelWidget(level: "6"),
+              LevelWidget(level: "4", fontSize: 24, height: 100),
+              LevelWidget(level: "5", fontSize: 24, height: 100),
+              LevelWidget(level: "6", fontSize: 24, height: 100),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              LevelWidget(level: "7"),
-              LevelWidget(level: "8"),
-              LevelWidget(level: "9"),
+              LevelWidget(level: "7", fontSize: 24, height: 100),
+              LevelWidget(level: "8", fontSize: 24, height: 100),
+              LevelWidget(level: "9", fontSize: 24, height: 100),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              LevelWidget(level: "10"),
-              LevelWidget(level: "11"),
-              LevelWidget(level: "12"),
+              LevelWidget(level: "10", fontSize: 24, height: 100),
+              LevelWidget(level: "11", fontSize: 24, height: 100),
+              LevelWidget(level: "12", fontSize: 24, height: 100),
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class LevelWidget extends StatelessWidget {
-  final String level;
-  const LevelWidget({
-    super.key,
-    required this.level,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, PracticeScreen.id, arguments: level);
-      },
-      child: Container(
-        width: 100,
-        height: 100,
-        padding: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(6.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5), // Darker shadow color
-              spreadRadius: 2,
-              blurRadius: 10,
-              offset: const Offset(4, 4), // Right and bottom offset
-            ),
-          ],
-          border: Border.all(
-            color: Colors.black,
-            width: 2.0,
-          ),
-        ),
-        child: Center(
-          child: Text(
-            level,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
       ),
     );
   }
