@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sign_learn/pages/practice_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static String id = "HomeScreen";
@@ -26,8 +27,16 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          Text(
+            "Level 1: Basics",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
@@ -75,32 +84,38 @@ class LevelWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 75,
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(6.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.5), // Darker shadow color
-            spreadRadius: 2,
-            blurRadius: 10,
-            offset: const Offset(4, 4), // Right and bottom offset
-          ),
-        ],
-        border: Border.all(
-          color: Colors.black,
-          width: 2.0,
-        ),
-      ),
-      child: Center(
-        child: Text(
-          level,
-          style: const TextStyle(
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, PracticeScreen.id, arguments: level);
+      },
+      child: Container(
+        width: 100,
+        height: 100,
+        padding: const EdgeInsets.all(16.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(6.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.5), // Darker shadow color
+              spreadRadius: 2,
+              blurRadius: 10,
+              offset: const Offset(4, 4), // Right and bottom offset
+            ),
+          ],
+          border: Border.all(
             color: Colors.black,
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
+            width: 2.0,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            level,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

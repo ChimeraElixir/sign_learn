@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_learn/pages/home_screen.dart';
-import 'package:sign_learn/pages/welcome_screen.dart';
+import 'package:sign_learn/pages/practice_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,8 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen(),
+    return MaterialApp(
+      initialRoute: HomeScreen.id,
+      home: const HomeScreen(),
+      routes: {
+        PracticeScreen.id: (context) => const PracticeScreen(),
+      },
     );
   }
 }
