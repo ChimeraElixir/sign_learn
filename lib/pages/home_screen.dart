@@ -26,10 +26,10 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               LevelWidget(level: "1"),
               LevelWidget(level: "2"),
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               LevelWidget(level: "4"),
               LevelWidget(level: "5"),
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               LevelWidget(level: "7"),
               LevelWidget(level: "8"),
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               LevelWidget(level: "10"),
               LevelWidget(level: "11"),
@@ -76,7 +76,8 @@ class LevelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
+      width: 75,
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(6.0),
