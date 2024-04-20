@@ -1,0 +1,3 @@
+kaggle kernels pull rkuo2000/asl-alphabet-cnn
+
+A subset of Classes ['A','B','C'.'D'.'E'.'nothing'] spilt into Train Test Val
