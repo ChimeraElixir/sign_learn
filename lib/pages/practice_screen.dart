@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sign_learn/widgets/level_widget.dart';
+import 'package:sign_learn/pages/camera_screen.dart';
 
 class PracticeScreen extends StatefulWidget {
   static String id = "PracticeScreen";
@@ -37,7 +37,46 @@ class _PracticeScreenState extends State<PracticeScreen> {
         children: <Widget>[
           _body(args),
           const SizedBox(height: 15),
-          const LevelWidget(level: "Practice", fontSize: 16.5, height: 60),
+          const SizedBox(height: 15),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                CameraScreen.id,
+              );
+            },
+            child: Container(
+              width: 100,
+              height: 60,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5), // Darker shadow color
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: const Offset(4, 4), // Right and bottom offset
+                  ),
+                ],
+                border: Border.all(
+                  color: Colors.black,
+                  width: 2.0,
+                ),
+              ),
+              child: const Center(
+                child: Text(
+                  "Practice",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -87,14 +126,40 @@ class _PracticeScreenState extends State<PracticeScreen> {
   }
 
   _buildLevelOne() {
-    return const Center(
-      child: Image(image: AssetImage("assets/bye.png")),
+    return const Column(
+      children: [
+        Text(
+          "Bye",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/bye.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelTwo() {
-    return const Center(
-      child: Image(image: AssetImage("assets/chocolate.png")),
+    return const Column(
+      children: [
+        Text(
+          "Chocolate",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/chocolate.png")),
+        ),
+      ],
     );
   }
 
@@ -105,62 +170,192 @@ class _PracticeScreenState extends State<PracticeScreen> {
   }
 
   _buildLevelTwelve() {
-    return const Center(
-      child: Image(image: AssetImage("assets/good_morning.png")),
+    return const Column(
+      children: [
+        Text(
+          "Good Morning",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/good_morning.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelELeven() {
-    return const Center(
-      child: Image(image: AssetImage("assets/good.png")),
+    return const Column(
+      children: [
+        Text(
+          "Good",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/good.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelTen() {
-    return const Center(
-      child: Image(image: AssetImage("assets/happy.png")),
+    return const Column(
+      children: [
+        Text(
+          "Happy",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/happy.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelNine() {
-    return const Center(
-      child: Image(image: AssetImage("assets/hello.png")),
+    return const Column(
+      children: [
+        Text(
+          "Hello",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/hello.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelEight() {
-    return const Center(
-      child: Image(image: AssetImage("assets/i_love_you.png")),
+    return const Column(
+      children: [
+        Text(
+          "I Love You",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/i_love_you.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelThree() {
-    return const Center(
-      child: Image(image: AssetImage("assets/please.png")),
+    return const Column(
+      children: [
+        Text(
+          "Please",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/please.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelFour() {
-    return const Center(
-      child: Image(image: AssetImage("assets/sad.png")),
+    return const Column(
+      children: [
+        Text(
+          "Sad",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/sad.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelSix() {
-    return const Center(
-      child: Image(image: AssetImage("assets/thank_you.png")),
+    return const Column(
+      children: [
+        Text(
+          "Thank You",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/thank_you.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelSeven() {
-    return const Center(
-      child: Image(image: AssetImage("assets/when.png")),
+    return const Column(
+      children: [
+        Text(
+          "When",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/when.png")),
+        ),
+      ],
     );
   }
 
   _buildLevelFive() {
-    return const Center(
-      child: Image(image: AssetImage("assets/excuse_me.png")),
+    return const Column(
+      children: [
+        Text(
+          "Excuse Me",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        Center(
+          child: Image(image: AssetImage("assets/excuse_me.png")),
+        ),
+      ],
     );
   }
 }

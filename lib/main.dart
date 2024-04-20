@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sign_learn/pages/camera_screen.dart';
 import 'package:sign_learn/pages/home_screen.dart';
 import 'package:sign_learn/pages/practice_screen.dart';
 
@@ -16,6 +17,7 @@ class MainApp extends StatelessWidget {
       home: const HomeScreen(),
       routes: {
         PracticeScreen.id: (context) => const PracticeScreen(),
+        CameraScreen.id: (context) => const CameraScreen(),
       },
     );
   }
